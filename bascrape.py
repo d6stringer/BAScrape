@@ -1,3 +1,8 @@
+'''
+Daniel Woodson
+2024.04.11
+'''
+
 # imports
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -25,6 +30,7 @@ def load_bas():
     Loads the bas and logs in
     '''
     driver.get(secrets["BAS_URL"])
+    #These may need to have some waits added but they seem to work for now
     un = driver.find_element(By.NAME, "name")
     un.send_keys(secrets["USER_NAME"])
     pw = driver.find_element(By.NAME, "pass")
@@ -89,7 +95,7 @@ def getMAU2():
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="downloadButton"]'))).click()
     # Click CSV download link
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/div[2]/span[1]/ul[2]/li[5]/span'))).click()
-    # time.sleep(10)
+    return
 
 def move_CSV(file):
     '''
