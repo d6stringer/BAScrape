@@ -20,9 +20,9 @@ You will need to create an .env file with the following variables, set appropria
  
 A \*.bat file can be created to use a windows scheduler. It would be something like this:
 
-@echo off
-cd "C:\ *the location of your file* \BAScrape\" 
-python bascrape.py %\*
-pause
+@echo off  
+cd "C:\ *the location of your file* \BAScrape\"   
+python bascrape.py %\*  
+pause  
 
 Leaving the "pause" allows you to see errors. It can be removed if you are satisfied that things are working ok.
