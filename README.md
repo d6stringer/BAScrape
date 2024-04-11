@@ -16,3 +16,10 @@ You will need to create an .env file with the following variables, set appropria
 - ORIGIN_PATH=*the path where the bas downloads files, typically the 'downloads' folder*
 - DESTINATION_PATH=*the path where you want the downloaded files to reside*
  
+A *.bat file can be created to use a windows scheduler. It would be something like this:
+@echo off
+cd "C:\ *the location of your file* \BAScrape\" 
+python bascrape.py %*
+pause
+
+Leaving the "pause" allows you to see errors. It can be removed if you are satisfied that things are working ok.
