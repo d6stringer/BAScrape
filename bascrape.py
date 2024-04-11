@@ -11,11 +11,11 @@ from dotenv import dotenv_values
 
 secrets = dotenv_values(".env")
 # where the files download to
-origin_path = "C:/Users/fs136650/Downloads/"
+origin_path = secrets["ORIGIN_PATH"]
 # list with original MUA-1 file name and new file name
 mua1_csv_name = ["MAU-1 - Temp & RHCSV", "MAU-1 - T&Rh"]
 # where to save new files
-destination_path = "C:/Users/fs136650/OneDrive - First Solar/Desktop/BAScrape Test/"
+destination_path = secrets["DESTINATION_PATH"]
 # list with original MUA-2 file name and new file name
 mua2_csv_name = ["FS MAU 2 - T & RhCSV" , "MAU-2 - T&Rh"]
 
