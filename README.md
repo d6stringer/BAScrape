@@ -2,7 +2,9 @@
 
 
 BAScrape is a web scraping app for use with Webctrl 7.0 using Selenium
+
 Written by: Daniel Woodson
+
 Written on: 2024.04.11
 
 The purpose of this app is to help collect the Temp & Rh data of our facility.
