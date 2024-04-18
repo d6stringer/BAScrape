@@ -120,6 +120,9 @@ def dates():
 if __name__ == "__main__":
     # Create web driver
     driver = webdriver.Firefox()
+    profile = driver.FirefoxProfile()
+    profile.set_preference('dom.block_download_insecure', 'false')
+    # profile.DEFAULT_PREFERENCES['frozen']["dom.block_download_insecure"] = True
     # Create actions driver
     actions = ActionChains(driver)
     load_bas()
