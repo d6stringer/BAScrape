@@ -27,3 +27,4 @@ python bascrape.py %\*
 pause  
 
 Leaving the "pause" allows you to see errors. It can be removed if you are satisfied that things are working ok.
+The .\Scripts\activate is the standard location of the venv virtual environment activation script
