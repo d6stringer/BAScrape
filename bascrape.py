@@ -7,6 +7,9 @@ Daniel Woodson
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver import ActionChains
 import shutil
@@ -119,10 +122,12 @@ def dates():
 
 if __name__ == "__main__":
     # Create web driver
-    driver = webdriver.Firefox()
-    profile = driver.FirefoxProfile()
-    profile.set_preference('dom.block_download_insecure', 'false')
-    # profile.DEFAULT_PREFERENCES['frozen']["dom.block_download_insecure"] = True
+    options=Options()
+    firefox_profile = FirefoxProfile()
+    # Allow download of zip files
+    firefox_profile.set_preference("dom.block_download_insecure", False)
+    options.profile = firefox_profile
+    driver = webdriver.Firefox(options=options)
     # Create actions driver
     actions = ActionChains(driver)
     load_bas()
@@ -133,6 +138,6 @@ if __name__ == "__main__":
     getMAU2()
     move_CSV(mua2_csv_name)
     # close all the windows
-    driver.quit()
+    # driver.quit()
     
 
