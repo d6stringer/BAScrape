@@ -1,6 +1,11 @@
 '''
 Daniel Woodson
 2024.04.11
+
+Update 1:
+2024.04.19
+zip update, firefox disabled download of zip files. Had to enable funct.
+added: Options(), FirefoxProfile()
 '''
 
 # imports
@@ -138,6 +143,6 @@ if __name__ == "__main__":
     getMAU2()
     move_CSV(mua2_csv_name)
     # close all the windows
-    # driver.quit()
+    driver.quit()
     
 
