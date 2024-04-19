@@ -21,7 +21,8 @@ You will need to create an .env file with the following variables, set appropria
 A \*.bat file can be created to use a windows scheduler. It would be something like this:
 
 @echo off  
-cd "C:\ *the location of your file* \BAScrape\"   
+cd "C:\ *the location of your file* \BAScrape\"  
+.\Scripts\activate 
 python bascrape.py %\*  
 pause  
 
