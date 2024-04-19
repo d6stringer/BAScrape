@@ -22,7 +22,7 @@ A \*.bat file can be created to use a windows scheduler. It would be something l
 
 @echo off  
 cd "C:\ *the location of your file* \BAScrape\"  
-.\Scripts\activate 
+.\Scripts\activate  
 python bascrape.py %\*  
 pause  
 
