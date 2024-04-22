@@ -9,6 +9,7 @@ added: Options(), FirefoxProfile()
 '''
 
 # imports
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -111,7 +112,7 @@ def move_CSV(file):
     The argument 'file' is a list where the 0 position is the "old" file name and the 1 position is the "new"
     '''
     zip = ".zip"
-    shutil.move((origin_path+file[0]+zip), (destination_path+file[1]+dates()+zip))
+    shutil.move((os.path.join(origin_path, (file[0]+zip))), (os.path.join(destination_path, (file[1]+dates()+zip))))
     return
 
 def dates():
